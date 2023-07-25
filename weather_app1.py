@@ -18,7 +18,7 @@ def text_to_speech(text):
 def transcribe_speech():
     # Initialisation
     r = sr.Recognizer()
-    with sr.Microphone(device_index=0) as source:
+    with sr.Microphone(device_index=-1) as source:
         r.adjust_for_ambient_noise(source)
         st.info("Je vous écoute...")
         # Stockage de la parole dans la variable audio_text
