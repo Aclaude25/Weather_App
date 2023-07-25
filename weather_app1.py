@@ -3,7 +3,7 @@ import streamlit as st
 import requests
 import speech_recognition as sr
 from gtts import gTTS
-from IPython.display import Audio
+# from IPython.display import Audio
 from io import BytesIO
 
 # Fonction pour générer la synthèse vocale et jouer l'audio
