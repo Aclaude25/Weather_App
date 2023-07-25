@@ -18,9 +18,9 @@ def text_to_speech(text):
 def transcribe_speech():
     # Initialisation
     r = sr.Recognizer()
-    with sr.Microphone() as source:
+    with sr.Microphone(device_index=2) as source:
+        r.adjust_for_ambient_noise(source)
         st.info("Je vous écoute...")
-
         # Stockage de la parole dans la variable audio_text
         audio_text = r.listen(source)
         st.info("Transcryption en cours...")
